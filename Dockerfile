@@ -9,7 +9,7 @@ RUN usermod -u 1000 www-data
 
 RUN apt-get update -y
 RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev nginx
-RUN docker-php-ext-install pdo pdo_mysql bcmath curl opcache
+RUN docker-php-ext-install pdo pdo_mysql bcmath curl opcache pgsql pdo_pgsql
 # RUN docker-php-ext-enable opcache
 
 WORKDIR /var/www
